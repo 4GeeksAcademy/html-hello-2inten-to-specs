@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureWave Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --color-bg-primary: #f5f5f5;
+        --color-text-primary: #282c34;
+        --color-accent: #61dafb;
+        --color-surface: #ffffff;
+      }
+
+      html.dark {
+        --color-bg-primary: #282c34;
+        --color-text-primary: #f5f5f5;
+        --color-surface: #4b4c54;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] antialiased transition-colors duration-300">
+    <header class="sticky top-0 z-50 border-b border-[#4B4C54]/20 bg-[var(--color-bg-primary)]/70 backdrop-blur-md">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#hero" class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em]">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#61DAFB] shadow-[0_0_16px_#61DAFB]"></span>
+          FutureWave
+        </a>
+
+        <div class="flex items-center gap-3 sm:gap-5">
+          <nav aria-label="Primary navigation">
+            <ul class="flex items-center gap-2 text-xs sm:gap-5 sm:text-sm">
+              <li>
+                <a href="#about" class="group relative py-1">
+                  About Us
+                  <span class="absolute bottom-0 left-0 h-px w-0 bg-[#61DAFB] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#work" class="group relative py-1">
+                  Work With Us
+                  <span class="absolute bottom-0 left-0 h-px w-0 bg-[#61DAFB] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#samples" class="group relative py-1">
+                  Samples
+                  <span class="absolute bottom-0 left-0 h-px w-0 bg-[#61DAFB] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            id="theme-toggle"
+            type="button"
+            class="inline-flex items-center gap-2 rounded-full border border-[#4B4C54]/30 bg-[var(--color-surface)] px-3 py-1.5 text-xs font-medium transition-all hover:border-[#61DAFB] hover:shadow-[0_0_16px_rgba(97,218,251,0.35)]"
+            aria-label="Switch day and night theme"
+            aria-pressed="false"
+          >
+            <span>Day</span>
+            <span class="text-[#61DAFB]">/</span>
+            <span>Night</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="mx-auto grid min-h-screen w-full max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8" aria-labelledby="hero-title">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-[#61DAFB]">Company Values</p>
+          <h1 id="hero-title" class="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            Precision, transparency, and momentum for every digital launch.
+          </h1>
+          <p class="mt-5 max-w-xl text-sm text-[var(--color-text-primary)]/80 sm:text-base">
+            We engineer clean interfaces and measurable growth systems for teams building the next generation of web products.
+          </p>
+        </div>
+
+        <figure class="rounded-3xl border border-[#4B4C54]/20 bg-[var(--color-surface)]/70 p-6 shadow-[0_12px_40px_rgba(40,44,52,0.12)] backdrop-blur-sm">
+          <svg viewBox="0 0 480 360" role="img" aria-label="Minimalist futuristic geometric illustration" class="h-auto w-full">
+            <defs>
+              <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#61DAFB" stop-opacity="0.9"></stop>
+                <stop offset="100%" stop-color="#61DAFB" stop-opacity="0.2"></stop>
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="478" height="358" rx="24" fill="none" stroke="#4B4C54" stroke-opacity="0.2"></rect>
+            <circle cx="240" cy="180" r="84" fill="none" stroke="url(#orbit)" stroke-width="2"></circle>
+            <circle cx="240" cy="180" r="132" fill="none" stroke="#61DAFB" stroke-opacity="0.35" stroke-width="1.5"></circle>
+            <path d="M76 260 L240 80 L404 260 Z" fill="none" stroke="#61DAFB" stroke-opacity="0.5" stroke-width="1.5"></path>
+            <circle cx="240" cy="180" r="10" fill="#61DAFB"></circle>
+            <circle cx="240" cy="180" r="4" fill="#F5F5F5"></circle>
+          </svg>
+        </figure>
+      </section>
+
+      <section id="about" class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8" aria-labelledby="about-title">
+        <h2 id="about-title" class="text-2xl font-semibold">About Us</h2>
+        <p class="mt-3 max-w-3xl text-sm text-[var(--color-text-primary)]/80 sm:text-base">
+          FutureWave Studio combines product strategy, visual systems, and frontend engineering to deliver outcomes that scale from MVP to enterprise.
+        </p>
+      </section>
+
+      <section id="work" class="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6 lg:px-8" aria-labelledby="work-title">
+        <h2 id="work-title" class="text-2xl font-semibold">Work With Us</h2>
+        <p class="mt-3 max-w-3xl text-sm text-[var(--color-text-primary)]/80 sm:text-base">
+          Collaborate with a senior team focused on rapid execution, design integrity, and conversion-focused user journeys.
+        </p>
+      </section>
+
+      <section id="samples" class="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8" aria-labelledby="samples-title">
+        <div class="flex items-end justify-between gap-4">
+          <h2 id="samples-title" class="text-2xl font-semibold">Samples</h2>
+          <span class="text-xs uppercase tracking-[0.2em] text-[#61DAFB]">Selected Work</span>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" role="list">
+          <article class="group overflow-hidden rounded-2xl border border-[#4B4C54]/20 bg-[var(--color-surface)]/80 shadow-[0_10px_24px_rgba(40,44,52,0.08)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#61DAFB]/60 hover:shadow-[0_16px_32px_rgba(97,218,251,0.22)]" role="listitem">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1000&q=80" alt="Mockup of analytics SaaS client website" class="h-48 w-full object-cover" />
+            <div class="space-y-3 p-5">
+              <h3 class="text-lg font-semibold">PulseBoard Platform</h3>
+              <p class="text-xs uppercase tracking-[0.15em] text-[#61DAFB]">SaaS Dashboard</p>
+              <a href="#" class="inline-flex items-center text-sm text-[var(--color-text-primary)] transition-colors group-hover:text-[#61DAFB]">View Project</a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-2xl border border-[#4B4C54]/20 bg-[var(--color-surface)]/80 shadow-[0_10px_24px_rgba(40,44,52,0.08)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#61DAFB]/60 hover:shadow-[0_16px_32px_rgba(97,218,251,0.22)]" role="listitem">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80" alt="Mockup of premium ecommerce client website" class="h-48 w-full object-cover" />
+            <div class="space-y-3 p-5">
+              <h3 class="text-lg font-semibold">Northline Commerce</h3>
+              <p class="text-xs uppercase tracking-[0.15em] text-[#61DAFB]">Ecommerce</p>
+              <a href="#" class="inline-flex items-center text-sm text-[var(--color-text-primary)] transition-colors group-hover:text-[#61DAFB]">View Project</a>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-2xl border border-[#4B4C54]/20 bg-[var(--color-surface)]/80 shadow-[0_10px_24px_rgba(40,44,52,0.08)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#61DAFB]/60 hover:shadow-[0_16px_32px_rgba(97,218,251,0.22)]" role="listitem">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80" alt="Mockup of fintech client website with metrics" class="h-48 w-full object-cover" />
+            <div class="space-y-3 p-5">
+              <h3 class="text-lg font-semibold">Orbit Finance</h3>
+              <p class="text-xs uppercase tracking-[0.15em] text-[#61DAFB]">Fintech</p>
+              <a href="#" class="inline-flex items-center text-sm text-[var(--color-text-primary)] transition-colors group-hover:text-[#61DAFB]">View Project</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[#4B4C54]/20 bg-[var(--color-surface)]/70 px-4 py-8 backdrop-blur-sm sm:px-6 lg:px-8">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <section aria-label="Legal information">
+          <h2 class="text-base font-semibold">Legal</h2>
+          <p class="mt-2 text-sm text-[var(--color-text-primary)]/75">All rights reserved. Copyright FutureWave Studio.</p>
+        </section>
+
+        <address class="not-italic">
+          <h2 class="text-base font-semibold">Contact</h2>
+          <p class="mt-2 text-sm text-[var(--color-text-primary)]/80">hello@futurewave.studio</p>
+          <div class="mt-2 flex items-center gap-4 text-sm">
+            <a href="#" class="transition-colors hover:text-[#61DAFB]">LinkedIn</a>
+            <a href="#" class="transition-colors hover:text-[#61DAFB]">Behance</a>
+            <a href="#" class="transition-colors hover:text-[#61DAFB]">X</a>
+          </div>
+        </address>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("theme-toggle");
+      const savedTheme = localStorage.getItem("fw-theme");
+
+      if (savedTheme === "dark") {
+        root.classList.add("dark");
+        themeToggle?.setAttribute("aria-pressed", "true");
+      }
+
+      themeToggle?.addEventListener("click", () => {
+        const isDark = root.classList.toggle("dark");
+        themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+        localStorage.setItem("fw-theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>

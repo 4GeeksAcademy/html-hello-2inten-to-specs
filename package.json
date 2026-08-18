@@ -1,0 +1,27 @@
+{
+  "name": "html-hello-2inten-to-specs",
+  "version": "1.0.0",
+  "description": "The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @tailwindcss/cli -i ./tailwind.css -o ./styles.css --minify",
+    "watch": "npx @tailwindcss/cli -i ./tailwind.css -o ./styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4GeeksAcademy/html-hello-2inten-to-specs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/4GeeksAcademy/html-hello-2inten-to-specs/issues"
+  },
+  "homepage": "https://github.com/4GeeksAcademy/html-hello-2inten-to-specs#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
